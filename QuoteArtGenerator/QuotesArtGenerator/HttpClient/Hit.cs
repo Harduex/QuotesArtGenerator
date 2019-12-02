@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HttpClientHandler
+namespace QuotesArtGenerator
 {
     public class Hit
     {

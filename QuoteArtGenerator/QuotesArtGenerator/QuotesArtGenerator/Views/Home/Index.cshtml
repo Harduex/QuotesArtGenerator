@@ -1,26 +1,37 @@
 ﻿@model QuotesArtGenerator.Models.Quote
-@using QuotesArtGenerator.Controllers;
+@using QuotesArtGenerator;
 
 @{
     ViewData["Title"] = "QuoteGen";
 }
 
-<h1>Category: @Html.DisplayFor(model => model.CATEGORY)</h1>
-<div>
+@*
+    <h1>Category: @Html.DisplayFor(model => model.CATEGORY)</h1>*@
+
     <hr />
-    <dl class="row">
-        <dd class="col-sm-10">
-            <h4>"@Html.DisplayFor(model => model.QUOTE)"</h4>
-        </dd>
-        <dd class="col-sm-10">
-            <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => model.AUTHOR)">
-                <h5>- @Html.DisplayFor(model => model.AUTHOR)</h5>
-            </a>
-        </dd>
-    </dl>
-</div>
-<hr />
-<div>
-    <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index" role="button">Generate</a>
-</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="co-sm-12 col-md-8">
+                <img src="@PixabayAPI.GetPixabayUrl(Model.CATEGORY).Result" class="rounded" alt="pixabayImg" style="position: relative; width: 100%;">
+                <h3 class="quote text-white">
+                    "@Html.DisplayFor(model => model.QUOTE)"
+                </h3>
+                <h5>
+                    <br />
+                    Author:
+                    <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => model.AUTHOR)">
+                        @Html.DisplayFor(model => model.AUTHOR)
+                    </a>
+                </h5>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <hr />
+        <div>
+            <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index" role="button">Generate</a>
+        </div>
+    </div>
+
+    @*<img src="@PixabayAPI.GetPixabayUrl(Model.CATEGORY).Result" class="rounded" alt="pixabayImg">*@
 

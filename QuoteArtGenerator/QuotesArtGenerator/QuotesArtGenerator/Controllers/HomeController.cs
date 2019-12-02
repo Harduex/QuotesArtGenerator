@@ -3,10 +3,10 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using PexelsNet;
 using QuotesArtGenerator.Data;
-using QuotesArtGenerator.Helper;
 using QuotesArtGenerator.Models;
 using WikipediaNet;
 using WikipediaNet.Objects;
+
 
 namespace QuotesArtGenerator.Controllers
 {
@@ -14,31 +14,26 @@ namespace QuotesArtGenerator.Controllers
     {
         Random random = new Random();
 
-        public IActionResult Index(int id)
+        public IActionResult Index()
         {
             QuotesList quotesList = new QuotesList();
 
             int Id = random.Next(0, quotesList.Quotes.Count);
             Quote quote = quotesList.Quotes[Id];
-            //quote.Id = Id;
 
             return View(quote);
         }
 
-        public IActionResult GetPhotoUrl()
+        public IActionResult GetImageUrl(string category)
         {
-            var Client = new PexelsClient("563492ad6f91700001000001c44c2fced4954bae8ca7f3ee1f27c348");
-            var results = Client.SearchAsync("music").Result;
-            int id = random.Next(0, 2);
-            string photoUrl = results.Photos[id].Url;
+            string ImgUrl = PixabayAPI.GetPixabayUrl(category).Result;
 
-            return Redirect(photoUrl);
+            return Redirect(ImgUrl);
         }
 
         public IActionResult GetWikiUrl(string author)
         {
             Wikipedia wikipedia = new Wikipedia();
-            //wikipedia.Limit = 2;
             string UrlFound = null;
             QueryResult results = wikipedia.Search(author);
             UrlFound = results.Search[0].Url.AbsoluteUri;

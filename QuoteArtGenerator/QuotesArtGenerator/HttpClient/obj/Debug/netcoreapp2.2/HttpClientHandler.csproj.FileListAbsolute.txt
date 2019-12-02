@@ -9,3 +9,14 @@ D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcorea
 D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.AssemblyInfo.cs
 D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.dll
 D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.pdb
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClientHandler.deps.json
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClientHandler.runtimeconfig.json
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClientHandler.runtimeconfig.dev.json
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClientHandler.dll
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClientHandler.pdb
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.csprojAssemblyReference.cache
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.csproj.CoreCompileInputs.cache
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.AssemblyInfoInputs.cache
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.AssemblyInfo.cs
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.dll
+D:\IT Step\C#\QuotesArtGeneratorRepo\QuotesArtGenerator\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClientHandler.pdb

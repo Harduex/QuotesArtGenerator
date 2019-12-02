@@ -12637,11 +12637,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator.csproj",
+      "projectUniqueName": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator.csproj",
       "projectName": "QuotesArtGenerator",
-      "projectPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator.csproj",
+      "projectPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\obj\\",
+      "outputPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\QuotesArtGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

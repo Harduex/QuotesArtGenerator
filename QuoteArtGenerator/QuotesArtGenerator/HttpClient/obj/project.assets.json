@@ -733,11 +733,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\HttpClientHandler.csproj",
+      "projectUniqueName": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\HttpClientHandler.csproj",
       "projectName": "HttpClientHandler",
-      "projectPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\HttpClientHandler.csproj",
+      "projectPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\HttpClientHandler.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\obj\\",
+      "outputPath": "D:\\IT Step\\C#\\QuotesArtGeneratorRepo\\QuotesArtGenerator\\QuoteArtGenerator\\QuotesArtGenerator\\HttpClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

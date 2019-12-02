@@ -46,6 +46,14 @@ body {
   margin-bottom: 60px;
 }
 
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 4px 4px 8px black;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
