@@ -1,0 +1,40 @@
+﻿@model IEnumerable<QuotesArtGenerator.Models.Quote>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List of all quotes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Quote
+            </th>
+            <th>
+                Author
+            </th> 
+            <th>
+                Category
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QUOTE)
+            </td>
+            <td>
+                <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => item.AUTHOR)">
+                    - @Html.DisplayFor(model => item.AUTHOR)
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORY)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

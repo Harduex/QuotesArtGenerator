@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "3951bc22edd0bdbdd7b790dacfb48828e30b7019"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Test/1.0.0": {
+        "dependencies": {
+          "FlickrNet": "3.26.0"
+        },
+        "runtime": {
+          "Test.dll": {}
+        }
+      },
+      "FlickrNet/3.26.0": {
+        "runtime": {
+          "lib/net20/FlickrNet.dll": {
+            "assemblyVersion": "3.26.0.0",
+            "fileVersion": "3.26.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Test/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FlickrNet/3.26.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mu8Se6Z0lUJjTlUfpBjqpysCZBBZTrgD4737HcbOCuuw8/X/9AKZB91pkt1n7uXPMqY47SyG8gVCUGC6NRiLUg==",
+      "path": "flickrnet/3.26.0",
+      "hashPath": "flickrnet.3.26.0.nupkg.sha512"
+    }
+  }
+}

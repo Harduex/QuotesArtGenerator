@@ -1,0 +1,11 @@
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClient.deps.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClient.runtimeconfig.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClient.runtimeconfig.dev.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClient.dll
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\bin\Debug\netcoreapp2.2\HttpClient.pdb
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.csprojAssemblyReference.cache
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.csproj.CoreCompileInputs.cache
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.AssemblyInfoInputs.cache
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.AssemblyInfo.cs
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.dll
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\HttpClient\obj\Debug\netcoreapp2.2\HttpClient.pdb

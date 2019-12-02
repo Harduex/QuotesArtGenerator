@@ -1,0 +1,10 @@
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\bin\Debug\netcoreapp2.2\Test.deps.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\bin\Debug\netcoreapp2.2\Test.runtimeconfig.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\bin\Debug\netcoreapp2.2\Test.runtimeconfig.dev.json
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\bin\Debug\netcoreapp2.2\Test.dll
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\obj\Debug\netcoreapp2.2\Test.csproj.CoreCompileInputs.cache
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfoInputs.cache
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfo.cs
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\bin\Debug\netcoreapp2.2\Test.pdb
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\obj\Debug\netcoreapp2.2\Test.dll
+D:\IT Step\C#\QuoteArtGenerator\QuotesArtGenerator\Test\obj\Debug\netcoreapp2.2\Test.pdb
