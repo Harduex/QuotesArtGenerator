@@ -2,6 +2,41 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "GrapeCity.Documents.Common/3.0.0.415": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Common.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
+      "GrapeCity.Documents.Imaging/3.0.0.415": {
+        "type": "package",
+        "dependencies": {
+          "GrapeCity.Documents.Common": "[3.0.0.415]",
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Imaging.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -5702,6 +5737,40 @@
     }
   },
   "libraries": {
+    "GrapeCity.Documents.Common/3.0.0.415": {
+      "sha512": "gFkDYAtlFzFFtan3voyUrJDOMfk9qDbn4gu524t8ekkdPMqyEniF7LLaWjoUC+o8J/YqpVexPaJSNzIaTJ2IeA==",
+      "type": "package",
+      "path": "grapecity.documents.common/3.0.0.415",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grapecity.documents.common.3.0.0.415.nupkg.sha512",
+        "grapecity.documents.common.nuspec",
+        "lib/net461/GrapeCity.Documents.Common.dll",
+        "lib/net461/GrapeCity.Documents.Common.xml",
+        "lib/net461/ja/GrapeCity.Documents.Common.resources.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Common.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Common.xml",
+        "lib/netstandard2.0/ja/GrapeCity.Documents.Common.resources.dll"
+      ]
+    },
+    "GrapeCity.Documents.Imaging/3.0.0.415": {
+      "sha512": "kYKLjKV2WKP6trfw4UwCnDsmuJOtryVlNKknKa+qR9LEU17w9S3hlIOlIEccE2faioveaOoYu5I+kLG4YzqeFQ==",
+      "type": "package",
+      "path": "grapecity.documents.imaging/3.0.0.415",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grapecity.documents.imaging.3.0.0.415.nupkg.sha512",
+        "grapecity.documents.imaging.nuspec",
+        "lib/net461/GrapeCity.Documents.Imaging.dll",
+        "lib/net461/GrapeCity.Documents.Imaging.xml",
+        "lib/net461/ja/GrapeCity.Documents.Imaging.resources.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Imaging.xml",
+        "lib/netstandard2.0/ja/GrapeCity.Documents.Imaging.resources.dll"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -14970,6 +15039,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "GrapeCity.Documents.Imaging >= 3.0.0.415",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Microsoft.AspNetCore.All >= 2.2.8",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -15029,6 +15099,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "GrapeCity.Documents.Imaging": {
+            "target": "Package",
+            "version": "[3.0.0.415, )"
+          },
           "Microsoft.AspNet.WebApi.Client": {
             "target": "Package",
             "version": "[5.2.7, )"

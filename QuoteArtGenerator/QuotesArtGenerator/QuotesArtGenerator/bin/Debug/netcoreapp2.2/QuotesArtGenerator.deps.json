@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "10d3e14c312b23990c86f97e765f768f314c77e8"
+    "signature": "42251c99948acfe20aa4a65fddca3d3c3ca9db01"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "QuotesArtGenerator/1.0.0": {
         "dependencies": {
+          "GrapeCity.Documents.Imaging": "3.0.0.415",
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.AspNetCore.All": "2.2.8",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -46,6 +47,45 @@
         },
         "compile": {
           "QuotesArtGenerator.dll": {}
+        }
+      },
+      "GrapeCity.Documents.Common/3.0.0.415": {
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {
+            "assemblyVersion": "3.0.0.415",
+            "fileVersion": "3.0.0.415"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Common.resources.dll": {
+            "locale": "ja"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {}
+        }
+      },
+      "GrapeCity.Documents.Imaging/3.0.0.415": {
+        "dependencies": {
+          "GrapeCity.Documents.Common": "3.0.0.415",
+          "System.Buffers": "4.5.0",
+          "System.Memory": "4.5.2",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {
+            "assemblyVersion": "3.0.0.415",
+            "fileVersion": "3.0.0.415"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Imaging.resources.dll": {
+            "locale": "ja"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.7": {
@@ -4166,6 +4206,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GrapeCity.Documents.Common/3.0.0.415": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gFkDYAtlFzFFtan3voyUrJDOMfk9qDbn4gu524t8ekkdPMqyEniF7LLaWjoUC+o8J/YqpVexPaJSNzIaTJ2IeA==",
+      "path": "grapecity.documents.common/3.0.0.415",
+      "hashPath": "grapecity.documents.common.3.0.0.415.nupkg.sha512"
+    },
+    "GrapeCity.Documents.Imaging/3.0.0.415": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kYKLjKV2WKP6trfw4UwCnDsmuJOtryVlNKknKa+qR9LEU17w9S3hlIOlIEccE2faioveaOoYu5I+kLG4YzqeFQ==",
+      "path": "grapecity.documents.imaging/3.0.0.415",
+      "hashPath": "grapecity.documents.imaging.3.0.0.415.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.7": {
       "type": "package",

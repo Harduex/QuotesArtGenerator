@@ -17,20 +17,24 @@
                 <h3 class="quote text-white">
                     "@Html.DisplayFor(model => model.QUOTE)"
                 </h3>
-                <h5>
-                    <br />
-                    Author:
-                    <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => model.AUTHOR)">
-                        @Html.DisplayFor(model => model.AUTHOR)
-                    </a>
-                </h5>
             </div>
             <div class="col-md-2"></div>
         </div>
         <hr />
-        <div>
-            <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index" role="button">Generate</a>
-        </div>
+        <h5>
+            <br />
+            Author:
+            <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => model.AUTHOR)">
+                @Html.DisplayFor(model => model.AUTHOR)
+            </a>
+            <a class="btn btn-outline-primary float-right" asp-controller="Home" asp-action="Index" role="button">Generate next</a>
+            <br />
+            Category:
+            <a href="/Home/List?category=@Html.DisplayFor(model => model.CATEGORY)">
+                @Html.DisplayFor(model => model.CATEGORY)
+            </a>
+        </h5>
+        
     </div>
 
     @*<img src="@PixabayAPI.GetPixabayUrl(Model.CATEGORY).Result" class="rounded" alt="pixabayImg">*@

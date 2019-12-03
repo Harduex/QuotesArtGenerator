@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PexelsNet;
 using QuotesArtGenerator.Data;
+using QuotesArtGenerator.Helper;
 using QuotesArtGenerator.Models;
 using ReflectionIT.Mvc.Paging;
 using WikipediaNet;
@@ -24,6 +25,15 @@ namespace QuotesArtGenerator.Controllers
 
             int Id = random.Next(0, quotesList.Quotes.Count);
             Quote quote = quotesList.Quotes[Id];
+
+            List<string> categories = new List<string>();
+            foreach (var item in quotesList.Quotes)
+            {
+                categories.Add(item.CATEGORY);
+            }
+            categories = categories.Distinct().ToList();
+
+            ViewBag.data = categories;
 
             return View(quote);
         }
@@ -45,16 +55,36 @@ namespace QuotesArtGenerator.Controllers
             return Redirect(UrlFound);
         }
 
-        public IActionResult List(int page)
+        public IActionResult List(int page, string category = "age")
         {
             QuotesList quotesList = new QuotesList();
+            var quotesByCategory = new List<Quote>();
 
-            var skip = page *= 10;
+            foreach (var quote in quotesList.Quotes)
+            {
+                if(quote.CATEGORY==category)
+                {
+                    quotesByCategory.Add(quote);
+                }
+            }
 
-            var range = quotesList.Quotes.Skip(skip - 10);
-            range = range.Take(10);
+            Pager pager = new Pager(quotesList.Quotes.Count, page, 10);
 
-            return View(range);
+            //var result = quotesList.Quotes.Skip(pager.Skip).Take(pager.Take);
+
+            List<string> categories = new List<string>();
+            foreach (var quote in quotesList.Quotes)
+            {
+                categories.Add(quote.CATEGORY);
+            }
+            categories = categories.Distinct().ToList();
+
+            ViewBag.data = categories;
+            ViewBag.category = category;
+
+            var result = quotesByCategory.Skip(pager.Skip).Take(pager.Take);
+
+            return View(result);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

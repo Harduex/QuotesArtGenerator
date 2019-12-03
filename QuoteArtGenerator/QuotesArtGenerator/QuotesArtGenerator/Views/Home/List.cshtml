@@ -4,7 +4,7 @@
     ViewData["Title"] = "List";
 }
 
-<h1>List of all quotes</h1>
+<h1>Category: @ViewBag.category</h1>
 
 <table class="table">
     <thead>
@@ -14,27 +14,22 @@
             </th>
             <th>
                 Author
-            </th> 
-            <th>
-                Category
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.QUOTE)
-            </td>
-            <td>
-                <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => item.AUTHOR)">
-                    - @Html.DisplayFor(model => item.AUTHOR)
-                </a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CATEGORY)
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QUOTE)
+                </td>
+                <td>
+                    <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => item.AUTHOR)">
+                        - @Html.DisplayFor(model => item.AUTHOR)
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
