@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PexelsNet;
 using QuotesArtGenerator.Data;
 using QuotesArtGenerator.Models;
+using ReflectionIT.Mvc.Paging;
 using WikipediaNet;
 using WikipediaNet.Objects;
 
@@ -41,11 +45,16 @@ namespace QuotesArtGenerator.Controllers
             return Redirect(UrlFound);
         }
 
-        public IActionResult List()
+        public IActionResult List(int page)
         {
             QuotesList quotesList = new QuotesList();
 
-            return View(quotesList.Quotes);
+            var skip = page *= 10;
+
+            var range = quotesList.Quotes.Skip(skip - 10);
+            range = range.Take(10);
+
+            return View(range);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
