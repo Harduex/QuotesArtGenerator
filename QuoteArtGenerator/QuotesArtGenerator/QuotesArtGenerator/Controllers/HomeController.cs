@@ -17,23 +17,44 @@ namespace QuotesArtGenerator.Controllers
 {
     public class HomeController : Controller
     {
-        Random random = new Random();
+        QuotesList quotesList = new QuotesList();
+        public List<string> Categories { get; set; }
+        public Random Random { get; set; }
+        public string RandomCategory { get; set; }
 
-        public IActionResult Index()
+        public HomeController()
         {
-            QuotesList quotesList = new QuotesList();
-
-            int Id = random.Next(0, quotesList.Quotes.Count);
-            Quote quote = quotesList.Quotes[Id];
-
+            Random = new Random();
             List<string> categories = new List<string>();
             foreach (var item in quotesList.Quotes)
             {
                 categories.Add(item.CATEGORY);
             }
-            categories = categories.Distinct().ToList();
+            Categories = categories.Distinct().ToList();
+            RandomCategory = Categories[Random.Next(0, Categories.Count)];
+        }
 
-            ViewBag.data = categories;
+
+        public IActionResult Index(string category = null)
+        {
+            if (category == null)
+            {
+                category = RandomCategory;
+            }
+            var quotesByCategory = new List<Quote>();
+
+            foreach (var item in quotesList.Quotes)
+            {
+                if (item.CATEGORY == category)
+                {
+                    quotesByCategory.Add(item);
+                }
+            }
+
+            int Id = Random.Next(0, quotesByCategory.Count);
+            Quote quote = quotesByCategory[Id];
+
+            ViewBag.data = Categories;
 
             return View(quote);
         }
@@ -55,9 +76,8 @@ namespace QuotesArtGenerator.Controllers
             return Redirect(UrlFound);
         }
 
-        public IActionResult List(int page, string category = "age")
+        public IActionResult List(int page = 1, string category = "age")
         {
-            QuotesList quotesList = new QuotesList();
             var quotesByCategory = new List<Quote>();
 
             foreach (var quote in quotesList.Quotes)
@@ -70,17 +90,9 @@ namespace QuotesArtGenerator.Controllers
 
             Pager pager = new Pager(quotesList.Quotes.Count, page, 10);
 
-            //var result = quotesList.Quotes.Skip(pager.Skip).Take(pager.Take);
-
-            List<string> categories = new List<string>();
-            foreach (var quote in quotesList.Quotes)
-            {
-                categories.Add(quote.CATEGORY);
-            }
-            categories = categories.Distinct().ToList();
-
-            ViewBag.data = categories;
+            ViewBag.data = Categories;
             ViewBag.category = category;
+            ViewBag.pager = pager;
 
             var result = quotesByCategory.Skip(pager.Skip).Take(pager.Take);
 

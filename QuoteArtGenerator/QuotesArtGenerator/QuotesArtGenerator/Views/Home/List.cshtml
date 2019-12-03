@@ -4,32 +4,79 @@
     ViewData["Title"] = "List";
 }
 
-<h1>Category: @ViewBag.category</h1>
+<div class="container">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Quote
-            </th>
-            <th>
-                Author
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <h1>Category: @ViewBag.category</h1>
+
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QUOTE)
-                </td>
-                <td>
-                    <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => item.AUTHOR)">
-                        - @Html.DisplayFor(model => item.AUTHOR)
-                    </a>
-                </td>
+                <th>
+                    Quote
+                </th>
+                <th>
+                    Author
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QUOTE)
+                    </td>
+                    <td>
+                        <a href="/Home/GetWikiUrl?author=@Html.DisplayFor(model => item.AUTHOR)">
+                            - @Html.DisplayFor(model => item.AUTHOR)
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            @{
+                var pager = ViewBag.pager as QuotesArtGenerator.Helper.Pager;
+
+                int prev = pager.CurrentPage - 1;
+                if (@pager.CurrentPage <= 1)
+                {
+                    prev = 0;
+                }
+                int next = pager.CurrentPage + 1;
+                int id = pager.CurrentPage;
+                int Count = pager.TotalPagesByCategory(Model);
+            }
+            <li class="page-item">
+                <a class="page-link"
+                   href="?category=@ViewBag.category&page=@prev" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            @if (prev != 0)
+            {
+                <li class="page-item"><a class="page-link" href="?category=@ViewBag.category&page=@prev">@prev</a></li>
+            }
+
+            <li class="page-item"><a class="page-link" href="?category=@ViewBag.category&page=@pager.CurrentPage">@pager.CurrentPage</a></li>
+            @do
+            {
+                id++;
+                <li class="page-item"><a class="page-link" href="?category=@ViewBag.category&page=@id">@id</a></li>
+                id++;
+            } while (id < Count);
+
+            <li class="page-item">
+                <a class="page-link" href="?category=@ViewBag.category&page=@next" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
