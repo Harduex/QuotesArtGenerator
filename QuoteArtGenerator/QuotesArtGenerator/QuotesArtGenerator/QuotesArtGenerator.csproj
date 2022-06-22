@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PexelsNet" Version="2.3.0" />
     <PackageReference Include="Pixabay.Net" Version="1.2.0" />
     <PackageReference Include="ReflectionIT.Mvc.Paging" Version="3.5.0" />
